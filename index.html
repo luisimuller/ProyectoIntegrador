@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+  <!-- libreria jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- validacion jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <!-- Usado en formularios de inicio de sesión-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js "
+  integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+  integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+  crossorigin="anonymous"></script>
+  <!-- Para pdf -->
+  <script type="text/javascript" src="jspdf.min.js"></script>
+  <title>Creator</title>
+</head>
+
+<body>
+
+  <!-- ENCARGADO: ALEJANDRO -->
+  <section class="vh" id="inicio">
+    <div class="d-flex justify-content-center">      
+      <nav class="navbar navbar-expand-lg navbar-light opacity ">
+        <div class="container nav">
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-c" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-2">
+              <li class="nav-item">
+                <a class="nav-link active li-1" aria-current="page" href="#inicio"
+                  >Inicio</a
+                >
+                <li class="nav-item">
+                  <a class="nav-link" href="#personal">Desarrolladores</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#nosotros">Conceptos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#proyectos">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto" tabindex="-1" aria-disabled="true">Contacto</a>
+              </li>
+            </ul>
+            <div class="container-c d-flex w-50">
+              <a href="#nosotros"><img src="./img/logo.png " class="img-fluid mb-0 p-2  img-barra" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="barra-vacia"></div>
+    <!-- principal -->
+    <div class="contenido-principal pt-5 pb-5 col">
+      <div class="imagen-p centrar">
+        <img src="./img/principal.png" class="img" alt="..." />
+      </div>
+      <div class="texto-principal mt-5 centrar">
+        <h1 class="text slideInRight">CREATOR Apps & Webs</h1>
+        <p class="animacion p-3">
+          Somos un equipo de desarrolladores con fuerte orientación comercial y amplia experiencia técnica. Trabajamos
+          junto a Pymes y grandes empresas de diversos rubros.
+          Nuestros principales diferenciales son la diversidad de tecnologías que manejamos y la versatilidad para
+          trabajar en conjunto con agencias de marketing digital para crear y optimizar sitios para campañas
+          publicitarias.
+          Hablamos el mismo idioma que tu agencia y nuestro flujo de trabajo es dinámico y ágil para obtener un
+          resultado de calidad.
+        </p>
+        <p class="animacion p-3">Nuestros planes de desarrollo están adaptados a varios modelos ya preestablecidos para
+          hacerlos más
+          accesibles. Sobre estos, nuestro equipo de diseño gráfico realiza una propuesta visual ajustada a la estética
+          de la marca, entregando un mockup final de la web. Una vez aprobado por el cliente, continua hacia el area de
+          desarrollo el cual materializará el proyecto final adaptándolo a todos los formatos.</p>
+        <div class="botones">
+          <a href="#"><button type="button" class="btn btn-primary btn-lg bt-color bt-color-s zoomInDown" data-bs-toggle="modal" data-bs-target="#miModal">Iniciar
+              Sesión</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>   
+
+    <!-- Formulario de ingreso -->
+    <div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+              <div class="signupFrm">
+                  <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="close"></button>
+                      <form action="" onsubmit="return false;" class="form" id="primer-form">
+                          <h1 class="title">Iniciar sesión</h1>
+                              <div class="inputContainer">
+                                  <input id="nombre" name="nombre"  type="text" class="input" placeholder="a">
+                                  <label for="nombre" class="label">Usuario</label>
+                              </div><br>
+  
+                              <div class="inputContainer">
+                                  <input id="email" name="email" type="email" class="input" placeholder="a" >
+                                  <label for="email" class="label">Email</label>
+                              </div><br>
+
+                              <div class="inputContainer">
+                                  <input id="clave" name="clave" type="password" class="input" placeholder="a">
+                                  <label for="clave" class="label">Contraseña</label>
+                              </div><br>
+
+                              <div class="">
+                                  <input type="checkbox" checked="checked" name="remember"> Recordar usuario 
+                              </div><br>
+                              
+                              <div class="d-flex gap-3" >
+                                  <p class="align-self-center pt-3">Aún no eres usuario?</p>
+                                  <!-- <button type="button" class=" btn-primary pb-2 " data-bs-toggle="modal"  data-bs-target="#modal2" data-bs-dismiss="modal">
+                                      Registrarse</button> -->
+                                  <div class="d-flex justify-content-between gap-3">
+                                    <input type="button" class="submitBtn mb-4" data-bs-toggle="modal"  data-bs-target="#modal2" data-bs-dismiss="modal" value="Registrarse">
+                                    <button type="submit" class="submitBtn mb-4" data-bs-toggle="modal"  data-bs-target="#modal3" data-bs-dismiss="modal" id="inicioSesion" onclick="saludar(event)">Ingresar</button> 
+                                  </div>                
+                                  <!-- <input id="botonIniciar" class="submitBtn" type="submit" data-bs-toggle="modal"  data-bs-target="#modal3" data-bs-dismiss="modal" value="Ingresar" > -->
+                              </div>
+                      </form>
+              </div>
+          </div>
+      </div>                
+  </div>
+<!-- Formulario de Registro -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle2" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="signupFrm">
+              <form action="" class="form" id="segundo-form">
+                  <h1 class="title">Registrarse</h1>
+                  <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="close"></button>
+
+                  <div class="inputContainer">
+                      <input id="usuarioRegistro" name="usuarioRegistro" type="text" class="input" placeholder="a">
+                      <label for="usuarioRegistro" class="label">Usuario</label>
+                  </div><br>
+  
+                  <div class="inputContainer">
+                      <input id="emailRegistro" name="emailRegistro" type="email"  class="input" placeholder="a">
+                      <label for="emailRegistro" class="label">Email</label>
+                  </div><br>
+
+                  <div class="inputContainer">
+                      <input id="claveRegistro" name="claveRegistro" type="password" class="input" placeholder="a">
+                      <label for="claveRegistro" class="label">Contraseña</label>
+                  </div><br>
+  
+                  <div class="inputContainer">
+                      <input id="claveConfirm" name="claveConfirm" type="password" class="input" placeholder="a">
+                      <label for="claveConfirm" class="label">Confirmar contraseña</label>
+                  </div><br>
+                  <div class="d-flex">
+                    <a href="javascript:genPDF()" class="align-self-center">Generar pdf con informacion registrada</a>
+                    <input id="botonRegistrar" type="submit" class="submitBtn mb-4" value="Enviar">
+                  </div>
+              </form>
+          </div>
+      </div>                
+  </div>
+</div>
+
+<!-- Modal para mostrar datos de ingreso de sesión -->
+
+<div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle3" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content ">
+          <div class="modal-header">
+              <h1 class="title">Bienvenido!</h1>
+                  <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="close"></button>
+          </div>
+          <div class="modal-body">
+              <input type="text" id="usuarioSaludo" class="border-0 text-uppercase">  
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal">Cerrar</button>
+          </div>
+      
+      </div>                
+  </div>
+</div>
+   <!-- TERMINA SECCIÓN INICIO DE SESIÓN -->
+
+  <!--seccion personal  -->
+
+  <section class="w-100 mt-4 pt-4" id="personal">
+    <div class="container justify-content-center cont">
+
+      <h2 class="text-center pt-3 pb-3 ">Staff Creator</h2>
+  
+  
+      <div class="row d-flex justify-content-center">
+        <div class="card m-3 p-0 " style="width:18rem">
+          <img src="./img/Luisi.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Luisina Muller</h5>
+            <p class="card-text text-light">Desarrolladora Web y Apps Responsive front-End</p>
+            <a href="https://www.linkedin.com/in/luisina-muller-2a500b15b/" target="_blank"><button type="button" class="btn btn-md bt-color">Más Sobre Mi</button>
+            </a>
+          </div>
+        </div>
+        <div class="card m-3 p-0  " style="width:18rem">
+          <img src="./img/Nico.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Nicolas Di Lorenzo</h5>
+            <p class="card-text text-light">Desarrollador Web y Apps Responsive front-End</p>
+            <a href="https://www.linkedin.com/in/nicol%C3%A1s-di-lorenzo-44481aa3/" target="_blank"><button type="button" class="btn btn-md bt-color">Más Sobre Mi</button>
+            </a>
+          </div>
+        </div>
+        <div class="card m-3 p-0 " style="width:18rem">
+          <img src="./img/user.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Alejandro Burgos</h5>
+            <p class="card-text text-light">Desarrollador web full-Stack</p>
+            <a href="#"><button type="button" class="btn btn-md bt-color">Más Sobre Mi</button>
+            </a>
+          </div>
+        </div>
+        <div class="card m-3 p-0  " style="width:18rem">
+          <img src="./img/user.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Daniel Cortez</h5>
+            <p class="card-text text-light">Desarrollador Web y Apps Responsive front-End</p>
+            <a href="#"><button type="button" class="btn btn-primary btn-md bt-color">Más Sobre Mi</button>
+            </a>
+          </div>
+        </div>
+        <div class="card m-3 p-0  " style="width:18rem">
+          <img src="./img/Rodrigo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Rodrigo Paliza</h5>
+            <p class="card-text text-light">Desarrollador Full Stack Web y Apps Responsive front-End</p>
+            <a href="https://www.linkedin.com/in/rodrigo-paliza-09852b23b/" target="_blank"><button type="button" class="btn btn-primary btn-md bt-color">Más Sobre Mi</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cards d-flex justify-content-center ">
+    </div>
+
+  </section>
+
+  <!-- ENCARGADO: RODRIGO -->
+  <section class="container w-100 row justify-content-center gap-2 about-info text-center mx-auto mt-5 pt-2 pb-3 vh-100" id="nosotros">
+    <div class="about px-5 pt-2 rounded-3 col-11 overflow-auto">
+      <h2>E-commerce</h2>
+      <p>Analizamos el modelo de negocio de su compañía y ayudamos a la elección y modelado de la arquitectura necesaria
+        para tener un canal de venta digital exitoso. Creamos plataformas de e-commerce B2B y B2C integradas o no con
+        los sistemas internos de la empresa. Nos enfocamos en la experiencia de usuario o experiencia de compra, ya que
+        entendemos que no sólo se atiene al diseño estructural y estratégico de las pantallas de un sitio sino que
+        incorpora otras ramas de la tecnología para depurar, afinar y mejorar esa experiencia, siempre en pos del punto
+        de conversión..</p>
+        <a href="https://www.youtube.com/watch?v=W96OoCl_GBU&ab_channel=LordFox" target="_blank"><button class="mt-4 bt-color">Ver mas...</button></a>
+    </div>
+    <div class="about px-5 pt-2 rounded-3 col-11 overflow-auto">
+      <h2>UX / UI</h2>
+      <p>Creamos soluciones innovadoras de alto impacto en el corto plazo, enfocándonos en la calidad de las
+        experiencias de las personas con las interfaces digitales, identificando touchpoints entre los consumidores y
+        las marcas.
+
+        Trabajamos sobre la personalidad de los productos para crear experiencias intuitivas que fascinen a los
+        usuarios.</p>
+      <a href="https://www.youtube.com/watch?v=PrGJXdJmCJo&ab_channel=SoftwareLion" target="_blank"><button class="mt-4 bt-color">Ver mas...</button></a>
+    </div>
+    <div class="about px-5 pt-2 rounded-3 col-11 overflow-auto">
+      <h2>E-Learning</h2>
+      <p>El principio más importante para desarrollar una plataforma de e-learning es no ver el diseño del e-learning
+        como diseño de información, sino como diseño de una experiencia.
+
+        En el último año hemos sido testigos de una transformación radical en la forma de enseñar y participar
+        académicamente, de estudiar y de asistir a clases. Esto no fue planificado ni regulado por normas o designios de
+        especialistas.
+        Por tal motivo acompañamos a nuestros clientes brindándoles consultoría tecnológica para la implementación de
+        sistemas de e-learning la cual nos permite diseñar y desarrollar plataformas LMS (Learning Management System) a
+        medida.</p>
+        <a href="https://www.youtube.com/watch?v=GCW1LzzdFsU&ab_channel=VerumGroup" target="_blank"><button class="mt-4 bt-color">Ver mas...</button></a>
+    </div>
+  </section>
+
+  <!-- ENCARGADO: NICOLAS -->
+  <section class="vh-100 mt-5 pt-5" id="proyectos">
+    <h2 class="text-center pt-3 pb-3">Proyectos realizados</h2>
+    <div class="contenedor-fotos">
+      <div class="columna">
+        <a href="https://iurbanestudioyconstructora.com.ar/" target="_blank"><img src="img/Iurban.jpg" alt="Foto 1"></a>
+        <a href="https://www.grupoanacleto.com.ar/" target="_blank"><img src="img/Anacleto.jpg" alt="Foto 2"></a>
+        <a href="https://www.libreriasacapuntas.com.ar/" target="_blank"><img src="img/Sacapuntas.jpg" alt="Foto 3"></a>
+        <a href="https://www.lupo.com.ar/" target="_blank"><img src="img/Lupo.jpg" alt="Foto 4"></a>
+      </div>
+      <div class="columna">
+        <a href="https://ceramicoslaplata.com/" target="_blank"><img src="img/Ceramicos.jpg" alt="Foto 5"></a>
+        <a href="https://primerapagina.info/" target="_blank"><img src="img/PrimeraPagina.jpg" alt="Foto 6"></a>
+        <a href="https://pet-shop-phi.vercel.app/" target="_blank"><img src="img/PetHouse.jpg" alt="Foto 7"></a>
+        <a href="https://jorrat.com.ar/" target="_blank"><img src="img/Jorrat.jpg" alt="Foto 8"></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ENCARGADO: NICOLAS-->
+  <section id="contacto">
+     <h2 class="text-center pt-3 pb-3">Consulta</h2>
+      <form id="consultaForm" onsubmit="enviarConsulta(event)">
+        <div class="container">
+          <div class="row gap-2">
+            <div class="col-xl-3"></div>
+            <div class="formStyle col-xl-4 rounded-2 text-light">
+              <label for="nombref" class="form-label">Nombre y Apellido:</label>
+              <input type="text" id="nombref" name="nombref" class="form-input" style="text-align: left;" placeholder="Escriba su nombre y apellido" required>
+              <br><br>
+              <label for="emailf" class="form-label">Email:</label>
+              <input type="email" id="emailf" name="emailf" class="form-input" placeholder="Escriba su email" required>
+              <br><br>
+              <label for="telefono" class="form-label">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="Escriba su teléfono sin 0 ni 15" pattern="[0-9]{10}" required>
+              <br><br>
+              <label for="pais" class="form-label">País:</label>
+              <input type="text" id="pais" name="pais" class="form-input" placeholder="Escriba su País" required>
+              <br><br>
+              <label for="tipoConsulta" class="form-label">Tipo de consulta:</label>
+              <input type="radio" id="apps" name="tipoConsulta" value="apps" required>
+              <label for="apps">Apps</label>
+              <input type="radio" id="webs" name="tipoConsulta" value="webs" required>
+              <label for="webs">Webs</label>
+              <input type="radio" id="appswebs" name="tipoConsulta" value="appswebs" required>
+              <label for="appswebs">Apps&Webs</label>
+              <br><br>
+              <label for="consulta" class="consultaUbi">Consulta:</label>
+              <textarea id="consulta" name="consulta" rows="auto" cols="45" placeholder="Escriba su consulta" required></textarea>
+              <br><br>
+              <button type="submit" id="enviarBtn">Enviar</button>
+            </div>
+            <div class="col-xl-3 d-flex align-items-center justify-content-center">
+              <div><img src="img/form.png" class="imgForm"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+
+  </section>
+
+
+  <!--  ENCARGADO RODRIGO  -->
+  <section class="clientes w-100">
+    <h2 class="text-center pb-5">Usuarios Registrados</h2>
+    <div id="reviews" class="d-flex flex-wrap flex-lg-nowrap w-100 justify-content-around align-items-center gap-5 mt-5 mb-5">
+    </div>
+  </section>
+
+  <!--  ENCARGADO RODRIGO  -->
+  <section class="footer">
+    <footer class="py-3 gap-3">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-2 col-xl-2 col-xxl-4 mx-auto mt-3 align-self-center">
+            <a href="#inicio"><img src="./img/logo.png" alt="logo" class="img-fluid w-5 mb-4"></a>
+            <p>Aplicaciones y Paginas Web responsive a medida</p>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-4 mx-auto my-1">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Tecnologias</h5>
+            <div class="">
+              <p>
+                <svg class="icon-foo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M480 32l-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z" />
+                </svg>
+                <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">css</a>
+              </p>
+              <p>
+                <svg class="icon-foo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z" />
+                </svg>
+                <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">Html</a>
+              </p>
+              <p>
+                <svg class="icon-foo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z" />
+                </svg>
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">Javascript</a>
+              </p>
+              <p>
+                <svg class="icon-foo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M418.2 177.2c-5.4-1.8-10.8-3.5-16.2-5.1.9-3.7 1.7-7.4 2.5-11.1 12.3-59.6 4.2-107.5-23.1-123.3-26.3-15.1-69.2.6-112.6 38.4-4.3 3.7-8.5 7.6-12.5 11.5-2.7-2.6-5.5-5.2-8.3-7.7-45.5-40.4-91.1-57.4-118.4-41.5-26.2 15.2-34 60.3-23 116.7 1.1 5.6 2.3 11.1 3.7 16.7-6.4 1.8-12.7 3.8-18.6 5.9C38.3 196.2 0 225.4 0 255.6c0 31.2 40.8 62.5 96.3 81.5 4.5 1.5 9 3 13.6 4.3-1.5 6-2.8 11.9-4 18-10.5 55.5-2.3 99.5 23.9 114.6 27 15.6 72.4-.4 116.6-39.1 3.5-3.1 7-6.3 10.5-9.7 4.4 4.3 9 8.4 13.6 12.4 42.8 36.8 85.1 51.7 111.2 36.6 27-15.6 35.8-62.9 24.4-120.5-.9-4.4-1.9-8.9-3-13.5 3.2-.9 6.3-1.9 9.4-2.9 57.7-19.1 99.5-50 99.5-81.7 0-30.3-39.4-59.7-93.8-78.4zM282.9 92.3c37.2-32.4 71.9-45.1 87.7-36 16.9 9.7 23.4 48.9 12.8 100.4-.7 3.4-1.4 6.7-2.3 10-22.2-5-44.7-8.6-67.3-10.6-13-18.6-27.2-36.4-42.6-53.1 3.9-3.7 7.7-7.2 11.7-10.7zM167.2 307.5c5.1 8.7 10.3 17.4 15.8 25.9-15.6-1.7-31.1-4.2-46.4-7.5 4.4-14.4 9.9-29.3 16.3-44.5 4.6 8.8 9.3 17.5 14.3 26.1zm-30.3-120.3c14.4-3.2 29.7-5.8 45.6-7.8-5.3 8.3-10.5 16.8-15.4 25.4-4.9 8.5-9.7 17.2-14.2 26-6.3-14.9-11.6-29.5-16-43.6zm27.4 68.9c6.6-13.8 13.8-27.3 21.4-40.6s15.8-26.2 24.4-38.9c15-1.1 30.3-1.7 45.9-1.7s31 .6 45.9 1.7c8.5 12.6 16.6 25.5 24.3 38.7s14.9 26.7 21.7 40.4c-6.7 13.8-13.9 27.4-21.6 40.8-7.6 13.3-15.7 26.2-24.2 39-14.9 1.1-30.4 1.6-46.1 1.6s-30.9-.5-45.6-1.4c-8.7-12.7-16.9-25.7-24.6-39s-14.8-26.8-21.5-40.6zm180.6 51.2c5.1-8.8 9.9-17.7 14.6-26.7 6.4 14.5 12 29.2 16.9 44.3-15.5 3.5-31.2 6.2-47 8 5.4-8.4 10.5-17 15.5-25.6zm14.4-76.5c-4.7-8.8-9.5-17.6-14.5-26.2-4.9-8.5-10-16.9-15.3-25.2 16.1 2 31.5 4.7 45.9 8-4.6 14.8-10 29.2-16.1 43.4zM256.2 118.3c10.5 11.4 20.4 23.4 29.6 35.8-19.8-.9-39.7-.9-59.5 0 9.8-12.9 19.9-24.9 29.9-35.8zM140.2 57c16.8-9.8 54.1 4.2 93.4 39 2.5 2.2 5 4.6 7.6 7-15.5 16.7-29.8 34.5-42.9 53.1-22.6 2-45 5.5-67.2 10.4-1.3-5.1-2.4-10.3-3.5-15.5-9.4-48.4-3.2-84.9 12.6-94zm-24.5 263.6c-4.2-1.2-8.3-2.5-12.4-3.9-21.3-6.7-45.5-17.3-63-31.2-10.1-7-16.9-17.8-18.8-29.9 0-18.3 31.6-41.7 77.2-57.6 5.7-2 11.5-3.8 17.3-5.5 6.8 21.7 15 43 24.5 63.6-9.6 20.9-17.9 42.5-24.8 64.5zm116.6 98c-16.5 15.1-35.6 27.1-56.4 35.3-11.1 5.3-23.9 5.8-35.3 1.3-15.9-9.2-22.5-44.5-13.5-92 1.1-5.6 2.3-11.2 3.7-16.7 22.4 4.8 45 8.1 67.9 9.8 13.2 18.7 27.7 36.6 43.2 53.4-3.2 3.1-6.4 6.1-9.6 8.9zm24.5-24.3c-10.2-11-20.4-23.2-30.3-36.3 9.6.4 19.5.6 29.5.6 10.3 0 20.4-.2 30.4-.7-9.2 12.7-19.1 24.8-29.6 36.4zm130.7 30c-.9 12.2-6.9 23.6-16.5 31.3-15.9 9.2-49.8-2.8-86.4-34.2-4.2-3.6-8.4-7.5-12.7-11.5 15.3-16.9 29.4-34.8 42.2-53.6 22.9-1.9 45.7-5.4 68.2-10.5 1 4.1 1.9 8.2 2.7 12.2 4.9 21.6 5.7 44.1 2.5 66.3zm18.2-107.5c-2.8.9-5.6 1.8-8.5 2.6-7-21.8-15.6-43.1-25.5-63.8 9.6-20.4 17.7-41.4 24.5-62.9 5.2 1.5 10.2 3.1 15 4.7 46.6 16 79.3 39.8 79.3 58 0 19.6-34.9 44.9-84.8 61.4zm-149.7-15c25.3 0 45.8-20.5 45.8-45.8s-20.5-45.8-45.8-45.8c-25.3 0-45.8 20.5-45.8 45.8s20.5 45.8 45.8 45.8z" />
+                </svg>
+                <a href="https://es.reactjs.org/" target="_blank">React</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-4 mx-auto my-1">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Redes Sociales</h5>
+            <p>
+              <a href="https://www.facebook.com/home.php" target="_blank">Facebook</a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            </p>
+            <p>
+              <a href="https://github.com/" target="_blank">GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- scriptS -->
+  <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>
